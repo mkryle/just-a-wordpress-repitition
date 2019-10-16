@@ -1,3 +1,6 @@
+<?php 
+/* Template Name:sida 2 */
+ ?>
 <?php get_header(); ?>
 
 <div>

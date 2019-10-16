@@ -19,4 +19,24 @@ if ( function_exists('register_sidebar') )
 )
 );
 
+
+function redtext_shortcode( $atts, $content = null ) {
+	return '<p class="redtext">' . $content . '</p>';
+}
+add_shortcode( 'redtext', 'redtext_shortcode' );
+
+
+
+function greentext_shortcode( $atts, $content = null ) {
+	return '<p class="greentext">' . $content . '</p>';
+}
+add_shortcode( 'greentext', 'greentext_shortcode' );
+
+
+
+function randomtext_shortcode( $atts, $content = null ) {
+	return '<p>hej här har du massa text som kommer från ingenstans, men du bad om det!</p>';
+}
+add_shortcode( 'randomtext', 'randomtext_shortcode' );
+
 ?>

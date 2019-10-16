@@ -1,5 +1,9 @@
 
-<p> end of site (footer)</p>
+
+
+<div id="footer">
+<p> end of site (footer) maby links, stuff and things. But not!</p>
+</div>
 <?php
 
 wp_footer(); ?>
