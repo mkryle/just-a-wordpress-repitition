@@ -1,0 +1,50 @@
+/*
+Theme Name: myTheme
+Theme URI: http://does not exist
+Author: Kyrle
+Author URI: http://gbgbeatz.se
+Description: it is what it is
+Version: 1.0
+License: None
+License URI: http://no.one
+Tags: övning 1
+Text Domain: not needed
+
+myTheme
+*/
+/* General styles
+------------------------------------------------------------------ */
+@font-face {
+  font-family: newonw;
+  src: url('goes here') format('truetype');
+}
+
+
+
+html {
+  color: black;
+}
+
+body {
+  background-color: lightblue;
+}
+
+#nav {
+
+  background-color: lightgray;
+}
+
+.menu {
+
+  display: block;
+}
+
+.menu ul {
+  display: block;
+}
+
+.menu li {
+  float: left;
+  display: block;
+  padding: 10px;
+}
