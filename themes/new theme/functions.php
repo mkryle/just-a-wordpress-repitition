@@ -2,9 +2,25 @@
     <?php register_nav_menu( 'side-menu', 'side-menu' ) ?>
     
 <?php function mystyle() {
-	wp_enqueue_style( 'mystyle', get_stylesheet_directory_uri().'/style.css');
+  wp_enqueue_style( 'mystyle', get_stylesheet_directory_uri().'/style.css');
+  wp_enqueue_style( 'mysbcss', get_stylesheet_directory_uri().'/css/beats.css');
+	wp_enqueue_style( 'mystyleFontAwes', get_stylesheet_directory_uri().'/css/font-awesome.min.css');
+  wp_enqueue_script( 'myscriptscripfot', get_stylesheet_directory_uri().'/js/index.js', false , false, true  );
+  wp_enqueue_script( 'myscriptscripvel', get_stylesheet_directory_uri().'/js/velocity.min.js', false , false, true  );
+ wp_enqueue_script( 'myscriptscripquery', get_stylesheet_directory_uri().'/js/jquery.min.js', false , false, true  );
 }
-add_action( 'wp_enqueue_scripts', 'mystyle');
+
+function load_stylesheets()
+{
+    $randomNum = rand(0, 100000);
+    wp_register_style('style', get_template_directory_uri() . '/style.css?' . $randomNum,
+    array(), false, 'all');
+    wp_enqueue_style('style');
+}
+
+
+
+add_action( 'wp_enqueue_scripts', 'mystyle', 'load_stylesheets');
 
 add_theme_support( 'post-thumbnails' );
 if ( function_exists('register_sidebar') )
@@ -18,6 +34,7 @@ if ( function_exists('register_sidebar') )
   'after_title' => '</h2>',
 )
 );
+
 
 
 function redtext_shortcode( $atts, $content = null ) {
