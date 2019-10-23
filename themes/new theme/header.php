@@ -10,8 +10,3 @@
   <?php wp_head();?>
 </head>
 <body>
-
-<div id="nav">
-<?php wp_nav_menu( ['theme_location' => 'nav']) ?>
-<br><br>
-</div>
